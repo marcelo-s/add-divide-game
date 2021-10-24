@@ -1,5 +1,5 @@
 package com.marcelo.gameserver.command;
 
-public enum Turn {
+public enum MovePlayer {
 	PLAYER1, PLAYER2
 }

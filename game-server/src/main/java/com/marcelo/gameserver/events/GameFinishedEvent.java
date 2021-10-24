@@ -1,15 +1,14 @@
 package com.marcelo.gameserver.events;
 
-import com.marcelo.gameserver.command.Turn;
+import com.marcelo.gameserver.command.MovePlayer;
 import lombok.Value;
 
 import java.util.UUID;
 
 @Value
-public class TurnEvent {
+public class GameFinishedEvent {
 
 	UUID gameId;
-	int value;
-	Turn turn;
+	MovePlayer winner;
 
 }

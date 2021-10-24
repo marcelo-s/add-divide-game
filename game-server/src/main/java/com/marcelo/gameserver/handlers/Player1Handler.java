@@ -11,14 +11,14 @@ import org.axonframework.eventhandling.EventHandler;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("player2")
+@Profile("player1")
 @Component
 @Slf4j
-@ProcessingGroup("player2-group")
-public class Player2Handler {
+@ProcessingGroup("player1-group")
+public class Player1Handler {
 	private final CommandGateway commandGateway;
 
-	public Player2Handler(CommandGateway commandGateway) {
+	public Player1Handler(CommandGateway commandGateway) {
 		this.commandGateway = commandGateway;
 	}
 
@@ -29,17 +29,16 @@ public class Player2Handler {
 
 	@EventHandler
 	public void on(NextMoveEvent event) {
-		if (event.getTurn() == MovePlayer.PLAYER2) {
+		if (event.getTurn() == MovePlayer.PLAYER1) {
 			int valueToAdd = PlayUtils.getValueToAdd(event.getValue());
 			int newValue = (event.getValue() + valueToAdd) / 3;
 			log.info("{} --> Received number: {} Chosen Added number: {} Resulting number after adding and division: " +
 					         "{}",
-			         MovePlayer.PLAYER2.name(),
+			         MovePlayer.PLAYER1.name(),
 			         event.getValue(),
 			         valueToAdd,
 			         newValue);
-			commandGateway.send(new PlayCommand(event.getGameId(), newValue, MovePlayer.PLAYER2));
+			commandGateway.send(new PlayCommand(event.getGameId(), newValue, MovePlayer.PLAYER1));
 		}
 	}
-
 }

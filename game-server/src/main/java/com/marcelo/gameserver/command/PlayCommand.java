@@ -11,6 +11,7 @@ public class PlayCommand {
 	@TargetAggregateIdentifier
 	UUID gameId;
 	int value;
+	MovePlayer player;
 
 	// constructor, getters, equals/hashCode and toString
 }

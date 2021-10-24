@@ -6,10 +6,10 @@ import lombok.Value;
 import java.util.UUID;
 
 @Value
-public class PlayEvent {
+public class NextMoveEvent {
 
 	UUID gameId;
 	int value;
-	MovePlayer player;
+	MovePlayer turn;
 
 }

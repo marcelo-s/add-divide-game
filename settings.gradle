@@ -1,2 +1,4 @@
 rootProject.name = 'add-divide-game'
 
+include 'game-server'
+

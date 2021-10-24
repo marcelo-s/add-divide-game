@@ -8,8 +8,14 @@ spring:
   jpa:
     generate-ddl: true
 
+logging:
+  level:
+    org.springframework.web: "info"
+
 axon:
   axonserver:
     servers: localhost:8124
 server:
   port: 8050
+
+name: PLAYER1
