@@ -1,0 +1,17 @@
+# Use postgres/example user/password credentials
+version: '3.3'
+
+services:
+  db:
+    image: postgres
+    env_file:
+      - database.env
+    ports:
+      - 5432:5432
+  axonserver:
+    image: axoniq/axonserver
+    hostname: axonserver
+    ports:
+      - '8024:8024'
+      - '8124:8124'
+      - '8224:8224'
