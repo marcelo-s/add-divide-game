@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: "player2"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gamedb
+    username: postgres
+    password: gamedb
+  jpa:
+    generate-ddl: true
+
+axon:
+  axonserver:
+    servers: localhost:8124
+server:
+  port: 8060
