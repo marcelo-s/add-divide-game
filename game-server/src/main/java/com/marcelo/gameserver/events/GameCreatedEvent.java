@@ -9,7 +9,6 @@ import java.util.UUID;
 public class GameCreatedEvent {
 
 	UUID gameId;
-	int seed;
 	MovePlayer creator;
 
 }

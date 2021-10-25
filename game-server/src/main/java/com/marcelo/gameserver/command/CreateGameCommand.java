@@ -14,6 +14,5 @@ public class CreateGameCommand {
 
 	@TargetAggregateIdentifier
 	UUID gameId;
-	int seed;
 	MovePlayer creator;
 }

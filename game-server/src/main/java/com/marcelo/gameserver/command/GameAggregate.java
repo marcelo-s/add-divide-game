@@ -30,13 +30,12 @@ public class GameAggregate {
 
 	@CommandHandler
 	public GameAggregate(CreateGameCommand command) {
-		apply(new GameCreatedEvent(command.getGameId(), command.getSeed(), command.getCreator()));
+		apply(new GameCreatedEvent(command.getGameId(), command.getCreator()));
 	}
 
 	@EventSourcingHandler
 	public void on(GameCreatedEvent event) {
 		this.gameId = event.getGameId();
-		this.currentValue = event.getSeed();
 		this.gameStatus = GameStatus.STARTED;
 		this.currentPlayerTurn = MovePlayer.PLAYER2;
 	}

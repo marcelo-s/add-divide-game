@@ -13,7 +13,8 @@ public class GameRouter {
 	public RouterFunction<ServerResponse> route(GameRouteHandler gameRouteHandler) {
 		return RouterFunctions
 				.route()
-				.POST("/game", gameRouteHandler::createGame)
+				.POST("/game/auto", gameRouteHandler::createGameAuto)
+				.POST("/game/manual", gameRouteHandler::createGameManual)
 				.build();
 	}
 }
