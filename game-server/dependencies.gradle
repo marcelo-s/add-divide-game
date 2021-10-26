@@ -22,6 +22,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.axonframework/axon-test
     testImplementation 'org.axonframework:axon-test:4.5.4'
 
+    // Api
+    implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.5.12'
 
+    // Libs
     implementation project(':common')
 }
