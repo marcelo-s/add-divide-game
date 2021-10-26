@@ -6,6 +6,7 @@ import com.marcelo.gameserver.command.PlayCommand;
 import com.marcelo.gameserver.web.model.in.CreateGameRequest;
 import com.marcelo.gameserver.web.validation.RouterValidator;
 import com.marcelo.gameserver.web.validation.exception.ValidationException;
+import commands.TestCommand;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.extensions.reactor.commandhandling.gateway.ReactorCommandGateway;
